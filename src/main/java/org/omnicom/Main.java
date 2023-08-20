@@ -1,13 +1,13 @@
 package org.omnicom;
 
+import org.omnicom.conexion.conexion;
+
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args){
-       String url = "jdbc:mysql://localhost:3306/omnicom";
-       String user = "root";
-       String password = "dimebag1971";
+
        Scanner scanner = new Scanner(System.in);
 
        System.out.print("Ingresa tu nombre: ");
@@ -15,7 +15,7 @@ public class Main {
 
        System.out.print("Ingresa tu telefono: ");
        String tel = scanner.nextLine();
-       try (Connection conn = DriverManager.getConnection(url,user,password);
+       try (Connection conn = conexion.getInstance() ;
             Statement stmt = conn.createStatement();
             ResultSet resultado = stmt.executeQuery("SELECT * FROM usuario")){
            String sql = "INSERT INTO usuario (name, telefono) VALUES (?, ?)";
