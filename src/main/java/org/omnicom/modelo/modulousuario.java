@@ -6,14 +6,14 @@ public class modulousuario {
     private String telefono;
     private String correo;
 
-    public modulousuario(Long idusuario, String name, String telefono, String correo) {
+    public modulousuario() {
         this.idusuario = idusuario;
         this.name = name;
         this.telefono = telefono;
         this.correo = correo;
     }
 
-    public String getCorreo() {
+    public String getCorreo(String correo) {
         return correo;
     }
 
@@ -30,9 +30,8 @@ public class modulousuario {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -44,4 +43,6 @@ public class modulousuario {
     public void setIdusuario(Long idusuario) {
         this.idusuario = idusuario;
     }
+
+
 }
