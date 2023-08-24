@@ -2,7 +2,7 @@ package org.omnicom.modelo;
 
 public class modulousuario {
     private Long idusuario;
-    private String name;
+    private String nombre;
     private String telefono;
     private String email;
 
@@ -12,7 +12,7 @@ public class modulousuario {
         return
                         idusuario +
                         " | " +
-                        name +
+                                nombre +
                         " | "  +
                         telefono +
                         " | " +
@@ -21,7 +21,7 @@ public class modulousuario {
 
     public modulousuario() {
         this.idusuario = idusuario;
-        this.name = name;
+        this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
     }
@@ -42,11 +42,11 @@ public class modulousuario {
         this.telefono = telefono;
     }
 
-    public String getName(String name) {
-        return this.name;
+    public String getName(String nombre) {
+        return nombre;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String nombre) {
+        this.nombre = nombre;
     }
 
     public Long getIdusuario(Long idusuario) {

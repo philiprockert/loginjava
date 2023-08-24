@@ -51,11 +51,11 @@ public class ImplementUsuario implements repo<modulousuario>{
         String sql = null;
         if (op == 3)
         {
-           sql = "INSERT INTO usuario (name, telefono, email) VALUES (?, ?, ?)";
+           sql = "INSERT INTO usuario (nombre, telefono, email) VALUES (?, ?, ?)";
         }
         else if
         ( op == 4) {
-            sql ="UPDATE usuario SET name = ?, telefono = ?, email= ? WHERE idusuario =?";
+            sql ="UPDATE usuario SET nombre = ?, telefono = ?, email= ? WHERE idusuario =?";
         }
 
 
@@ -100,7 +100,7 @@ public class ImplementUsuario implements repo<modulousuario>{
     private static modulousuario Crearusuario(ResultSet rs) throws SQLException {
         modulousuario u = new modulousuario();
         u.setIdusuario(rs.getLong("idusuario"));
-        u.setName(rs.getString("name"));
+        u.setName(rs.getString("nombre"));
         u.setEmail(rs.getString("email"));
         u.setTelefono(rs.getString("telefono"));
         return u;
