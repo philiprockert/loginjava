@@ -4,24 +4,37 @@ public class modulousuario {
     private Long idusuario;
     private String name;
     private String telefono;
-    private String correo;
+    private String email;
+
+
+
+    public String toString() {
+        return
+                        idusuario +
+                        " | " +
+                        name +
+                        " | "  +
+                        telefono +
+                        " | " +
+                                email;
+    }
 
     public modulousuario() {
         this.idusuario = idusuario;
         this.name = name;
         this.telefono = telefono;
-        this.correo = correo;
+        this.email = email;
     }
 
-    public String getCorreo(String correo) {
-        return correo;
+    public String getEmail(String email) {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getTelefono() {
+    public String getTelefono(String telefono) {
         return telefono;
     }
 
@@ -29,14 +42,14 @@ public class modulousuario {
         this.telefono = telefono;
     }
 
-    public String getName() {
+    public String getName(String name) {
         return this.name;
     }
     public void setName(String name) {
         this.name = name;
     }
 
-    public Long getIdusuario() {
+    public Long getIdusuario(Long idusuario) {
         return idusuario;
     }
 
